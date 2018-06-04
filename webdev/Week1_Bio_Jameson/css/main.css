@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body{
+	padding: 0;
+	padding-bottom: 200px;
+	margin: 0;
+	background:#f4f4f4;
+}
+html,h1,h2,h3,h4,h5,h6,a{
+	font-family: "Raleway";
+}
+
+span.icon:before {
+  font-family: FontAwesome;
+  content: "\f015";
+
+}
+
+
+.navbar{
+	background:#F67280;
+}
+.nav-link , .navbar-brand{
+	color: #F8B195;
+	cursor: pointer;
+}
+.nav-link{
+	margin-right: 1em !important;
+}
+.nav-link:hover{
+
+	color: #F8B195;
+
+}
+.navbar-collapse	{
+ justify-content: flex-end;
+}
+
+nav a:hover	{
+		color:#fff !important;
+						}
+
+/*header style*/
+.header{
+	position: relative;
+	background-image: url('../images/headerback.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.interests-background {
+	position: relative;
+	background-image: url('../images/acid-citric-citrus-997725.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.resume-background {
+	position: relative;
+	background-image: url('../images/apple-background-connection-399161.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.overlay{
+	position: absolute;
+	min-height: 100%;
+	min-width: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(244, 244, 244, 0.79);
+}
+
+.icons {
+	color: #F67280;
+	!important;
+}
+
+.icons:hover {
+	color: #F8B195;
+	!important;
+}
+.description{
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+}
+.description h1{
+	color:#F67280 ;
+
+}
+.description p{
+	color:#666;
+	font-size: 20px;
+	width: 50%;
+	line-height: 1.5;
+	overflow: hidden;
+  white-space: nowrap;
+}
+
+.about{
+	margin: 4em 0;
+	padding: 1em;
+	padding-bottom: 100px;
+	position: relative;
+}
+.about h1{
+	color:#F67280;
+	margin: 2em;
+}
+.about img{
+	max-width: 100%;
+    height: auto;
+    border-radius: 50%
+}
+.about span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+.about .desc{
+	padding: 2em;
+	border-left:4px solid #C06C84;
+}
+.about .desc h3{
+	color: #355C7D;
+}
+.about .desc p{
+	line-height:2;
+	color:#888;
+}
+
+
+/*Interest*/
+.interests{
+	margin: 4em 0;
+	padding: 1em;
+	padding-top: 100px;
+	padding-bottom: 200px;
+}
+.interests h1{
+	color:#F67280;
+	margin: 2em;
+}
+.interests img{
+	max-width: 100%;
+    height: auto;
+
+}
+.interests span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+.interests .desc{
+	padding: 2em;
+	border-left:4px solid #10828C;
+}
+.interests .desc h3{
+	color: #355C7D;
+}
+.interests .desc p{
+	line-height:2;
+	color:#888;
+}
+
+/*goals style*/
+
+.goals{
+	margin: 4em 0;
+	padding: 1em;
+	padding-top: 100px;
+	padding-bottom: 300px;
+	position: relative;
+}
+.goals h1{
+	color:#F67280;
+	margin: 2em;
+}
+.goals img{
+	max-width: 100%;
+    height: auto;
+
+}
+.goals span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+.goals .desc{
+	padding: 2em;
+	border-left:4px solid #C06C84;
+}
+.goals .desc h3{
+	color: #355C7D;
+}
+.goals .desc p{
+	line-height:2;
+	color:#888;
+}
+
+/*resume style */
+.resume{
+	margin: 4em 0;
+	padding: 1em;
+	padding-top: 200px;
+}
+.resume h1{
+	color:#F67280;
+	margin: 2em;
+}
+.resume img{
+	max-width: 100%;
+    height: auto;
+
+
+}
+.resume span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+.resume .desc{
+	padding: 2em;
+	border-left:4px solid #10828C;
+}
+.resume .desc h3{
+	color: #355C7D;
+}
+.resume .desc p{
+	line-height:2;
+	color:#888;
+}
