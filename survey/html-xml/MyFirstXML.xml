@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<employees>
+<employee>
+<name>Connie Cobol</name>
+<idnumber>098401</idnumber>
+<wage>10.60</wage>
+<hours>51.0</hours>
+<overtime>11.0</overtime>
+<gross>598.90</gross>
+<social-securirty>xxx-xx-9032</social-securirty>
+<paydate>02/11/2018</paydate>
+<gender>F</gender>
+<marital_status>Single</marital_status>
+<us_veteran>Yes</us_veteran>
+</employee>
+<employee>
+  <name>Mary Apl</name>
+  <idnumber>526488</idnumber>
+  <wage>9.75</wage>
+  <hours>42.5</hours>
+  <overtime>2.5</overtime>
+  <gross>426.56</gross>
+  <social-securirty>xxx-xx-5938</social-securirty>
+  <paydate>02/11/2018</paydate>
+  <gender>F</gender>
+  <marital_status>Married</marital_status>
+  <us_veteran>No</us_veteran>
+</employee>
+<employee>
+  <name>Frank Fortran</name>
+  <idnumber>765349</idnumber>
+  <wage>10.50</wage>
+  <hours>37.0</hours>
+  <overtime>0.0</overtime>
+  <gross>388.50</gross>
+  <social-securirty>xxx-xx-1256</social-securirty>
+  <paydate>02/11/2018</paydate>
+  <gender>M</gender>
+  <marital_status>Married</marital_status>
+  <us_veteran>No</us_veteran>
+</employee>
+<employee>
+  <name>Jeff Ada</name>
+  <idnumber>034645</idnumber>
+  <wage>12.25</wage>
+  <hours>45.0</hours>
+  <overtime>5.0</overtime>
+  <gross>581.88</gross>
+  <social-securirty>xxx-xx-4829</social-securirty>
+  <paydate>02/11/2018</paydate>
+  <gender>M</gender>
+  <marital_status>Single</marital_status>
+  <us_veteran>Yes</us_veteran>
+</employee>
+<employee>
+  <name>Anton Pascal</name>
+  <idnumber>127615</idnumber>
+  <wage>8.35</wage>
+  <hours>0.0</hours>
+  <overtime>0.0</overtime>
+  <gross>0.00</gross>
+  <social-securirty>xxx-xx-0538</social-securirty>
+  <paydate>02/11/2018</paydate>
+  <gender>M</gender>
+  <marital_status>Married</marital_status>
+  <us_veteran>No</us_veteran>
+</employee>
+</employees>

@@ -1,0 +1,35 @@
+/* Gabrielle Jameson Project 3 */
+
+body{
+margin: 50px;
+font-family: sans-serif;
+background-color: bisque;
+}
+h2{
+color:darkblue;
+font-size: 2em;
+}
+h3{
+color: green;
+background-color: lightblue;
+}
+
+address{
+color: red;
+text-align: center;
+font-style: italic;
+font-variant: small-caps;
+font-weight: 700;
+font-size: 12pt;
+line-height: 24pt;
+}
+blockquote{
+background-color: gold;
+width: 600px;
+padding: 20px;
+}
+li{
+text-transform: capitalize;
+line-height: 2;
+color: green;
+}

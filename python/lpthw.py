@@ -1,0 +1,7 @@
+print("how old are you?", end='')
+age = input()
+print("how tall", end='')
+height=input()
+print("weight?", end='')
+weight=input()
+print(f"so, you'are {age} old, {height} tall and {weight} heavy.")

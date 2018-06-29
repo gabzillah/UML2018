@@ -1,0 +1,152 @@
+/* Space out content a bit */
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 1rem;
+  border-bottom: .05rem solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 3rem;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 1.5rem;
+  color: #777;
+  border-top: .05rem solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+}
+.container-narrow > hr {
+  margin: 2rem 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-radius: 25px;
+
+  border-bottom: .05rem solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: .75rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 3rem 0;
+}
+.marketing p + h4 {
+  margin-top: 1.5rem;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 48em) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 2rem;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+
+
+  /*  */
+
+
+
+/* Floating Social Media Bar Style Starts Here */
+
+/* Floating Social Media Bar Style Starts Here */
+    .fl-fl {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      padding: 4px;
+      width: 200px;
+      position: fixed;
+      right: -170px;
+      z-index: 1000;
+      font: normal normal 10px Arial;
+      -webkit-transition: all .25s ease;
+      -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+      -o-transition: all .25s ease;
+      transition: all .25s ease;
+    }
+
+    .fa {
+      font-size: 20px;
+      color: #fff;
+      padding: 10px 0;
+      width: 40px;
+      margin-left: 8px;
+    }
+
+    .fl-fl:hover {
+      right: 0;
+    }
+
+    .fl-fl a {
+      color: #fff !important;
+      text-decoration: none;
+      text-align: center;
+      line-height: 43px!important;
+      vertical-align: top!important;
+    }
+
+    .float-fb {
+      top: 160px;
+      background:#3b5998;
+      color:#ffffff;
+    }
+
+    .float-tw {
+      top: 215px;
+      background:#55acee;
+    }
+
+    .float-gp {
+      top: 270px;
+      background:#dd4b39;
+    }
+
+    .float-ig {
+      top: 325px;
+      background:#4c68d7;
+    }
+
+    .float-yt {
+      top: 380px;
+      background:#ff0000;
+    }
+    /* Floating Social Media Bar Style Ends Here */
+}

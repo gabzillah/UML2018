@@ -1,0 +1,297 @@
+<html>
+<head>
+<title>Homework Assignment: Gross Pay Calculator</title>
+<script type="text/javascript">
+
+//
+// Homework Assignment:  Gross Pay Calculator
+//
+
+// Initialize some global variables to use in processing form data.
+//
+
+//------------------------------------------------------------------------------
+// Create the Two-Dimensional array of Employee Clock # and names here
+
+// employee array - copy one of the arrays from the Two-Dimensional array example.
+// See Part 2 - Two-dimensional arrays.
+
+var employee = new Array(5);
+var i=0
+for (i=0; i<5; i++)
+{
+    employee[i]= new Array(2);
+}
+
+employee[0][0]="098401";
+employee[0][1]="Connie Cobol";
+employee[1][0]="526488";
+employee[1][1]="Mary Apl";
+employee[2][0]="765349";
+employee[2][1]="Frank Fortran";
+employee[3][0]="034645";
+employee[3][1]="Jeff Ada";
+employee[4][0]="127615";
+employee[4][1]="Anton Pascal";
+
+// Over Time Pay Factor Min/Max
+
+var otpf_min = 1.5;
+var otpf_max = 2.0;
+
+//------------------------------------------------------------------------------
+// Main entry point for the Gross Pay Calculator
+//
+//
+function calculateGrossPay() {
+
+//
+// Check the form fields to make sure they are not empty.
+// If the field is empty then return (exit) from the function.
+//
+
+// If the Clock # field is empty then exit the function.
+
+if (fieldEmpty("Clock #",document.gpc.clock.value)) { return; }
+
+// If the Wage field is empty then exit the function.
+
+// NOTE:  Here is how you apply it to the wage field
+if (fieldEmpty("Wage",document.gpc.wage.value)) { return; }
+
+// If the Hours field is empty then exit the function.
+if(fieldEmpty("Hours", document.gpc.hours.value)) {return;}
+// TODO:  Repeat the same thing with hours field
+
+// If the OT field is empty then exit the function.
+if(fieldEmpty("ot", document.gpc.ot.value)) {return};
+// TODO: Repeat the same thing with ot field
+
+// If the OT Pay Factor field is empty then exit the function.
+if(fieldEmpty("otpf", document.gpc.otpf.value)) {return};
+// TODO: Repeat the same thing with otpf field
+
+// If the Service field is empty then exit the function.
+if(fieldEmpty("service",document.gpc.service.value)) {return};
+// Start validating the fields
+
+
+// Check to see if the clock number is valid
+//
+// This calls the 'validClockNumber' funtion that is farther down in the code.
+// At this point you will either have the employee name or a null ("") string.
+
+var employee_name = validClockNumber();
+
+// Complete: if the employee name is "" then alert the user with a javascript alert and return from function.
+
+// NOTE:  make sure you don’t forget the ALERT!
+if (employee_name == "") {
+    alert ("Please enter a valid Clock Number");
+    return;
+}
+
+
+// Check to see if the wage entry is a valid number. If not then alert user and return from function.
+// First get the wage value from the form using the document.gpc.ELEMENTNAME.value method.  Next
+// use a conditional statement and the  "isNAN" or "Number" methods to determine if the value is a
+// valid number.  If the value is not a number then return (exit) from the function.
+
+var wage = document.gpc.wage.value;
+
+// NOTE:  use the isNaN function and alert if needed
+if (isNaN(wage)) {
+    alert ("Please enter a valid wage");
+    return;
+}
+
+// Check to see if the Hours worked entry is a valid number. If not then alert user and return from function.
+//
+
+var hours = document.gpc.hours.value;
+
+// TODO: Repeat the same isNaN function as wage, but with hours
+if(isNaN(hours)) {
+  alert("Please enter vaild hours");
+  return;
+}
+
+// Check to see if the OT Hours worked entry is a valid number
+// and if it qualifies (Hours should be over 40).  If it does
+// not qualify for OT then set the field to 0.0.
+//
+var ot = document.gpc.ot.value;
+
+// Is it a number?
+
+// TODO:  Repeat the same isNaN function as wage, but with ot
+if(isNaN(ot)) {
+  alert("Please enter valid overtime");
+  return;
+}
+
+// Is it valid ot? Are hours > 40?  To be valid Overtime, the total hours must be greater
+// than 40 hours.  At this point we have the "hours" and "ot" hours.  If the "hours" is more
+// than 40 then the "ot" hours should be ok.  If not then set the "ot" field to 0.0.
+// Use the document.gpc.ELEMENTNAME.value = 0.0 to set the form field ot value.
+
+// NOTE:  If no OT, set all OT related fields to zero
+if (hours <= 40) {   // Not greater than 40?  Set the ot field to 0.00 and continue
+    document.gpc.ot.value=0.00;
+    document.gpc.otpf.value=0.00;
+    ot = 0.00;
+}
+
+// Check to see if the OT Pay Factor is a valid number and is
+// one of the valid OT Pay Factors.  If it fails the test then alert user and return from function.
+//
+var otpf = document.gpc.otpf.value;
+
+// Now check the OT Pay Factor rate
+
+// TODO: Use the isNaN function on otpf to make sure
+// it’s a number
+if(isNaN(otpf)) {
+  alert("Please enter vaild overtime pay factor");
+  return;
+}
+
+// NOTE:  Can only be 1.5 or 2.0, no other values allowed
+
+if (otpf != 0.0) {
+    if (otpf != otpf_max) {
+        if (otpf != otpf_min) {
+            alert ("Please enter a valid Overtime Pay Factor of 1.5 or 2.0");
+            return;
+        }
+    }
+}
+
+// check to see if Service field is a valid number
+
+var service = document.gpc.service.value;
+
+if(isNaN(service)) {
+  alert("Please enter a vaild number of service years");
+  return;
+}
+
+//  At this point we have the information we need to calculate and display the Gross Pay for
+//  the employee with the given Clock #.
+
+// NOTE:  Just so you don’t struggle with the formula
+gross_pay = (hours-ot) * wage + (ot * otpf * wage);
+
+// Display your results on the web page in the employee_name and gpvalue div tags.
+
+// put employee name in the 'employee_name' div tag.
+
+document.getElementById("employee_name").innerHTML = employee_name;
+
+// put the calculated gross_pay in the 'gpvalue' div tag.
+// Prefix the gross_pay with the $ sign and show 2 decimal points.
+
+document.getElementById("gpvalue").innerHTML = "$ " + gross_pay.toFixed(2);
+
+
+}  // function calculateGrossPay
+
+
+//--------------------------------------------
+// Check to see if the field is empty
+//
+// Finish this function.  If the field is empty create a message telling the user which field is empty.
+// Display the message in a javascript 'alert()'.  Return 1 if the field is empty, otherwise return 0.
+
+function fieldEmpty(fieldName,fieldValue) {
+var msg=" is a required field";
+
+if (fieldValue == "") {
+    alert (fieldName +(msg));
+    return 1;
+}
+else {
+    return 0;
+}
+
+}  // function fieldEmpty
+
+//--------------------------------------------
+// Check to see if the clock number is valid.
+// If valid then return the Employee name
+// otherwise return an empty string.
+//
+function validClockNumber() {
+
+// Loop through the employee array to try and match the Clock Number entered on the form.
+// If the clock number is valid return the employee name, else return an empty string.
+
+// NOTE:  See the reset button at the end of the file … don’t forget!
+// NOTE:  OK … this one is a bit hard for newbies … so here you go:
+var c = 0;
+var cindex = (-1);  // Index value of matching clock number
+
+var clockNumber=document.gpc.clock.value;
+
+// Loop through looking for match
+for (c=0; c<5; c++) {
+    if (clockNumber == employee[c][0])
+        cindex = c;
+}
+
+// Match if index not equal to -1
+if (cindex != (-1))
+    return employee[cindex][1];
+
+// No match found if we get here
+return "";
+
+}  // function validClockNumber
+
+
+</script>
+</head>
+<body>
+<h1>Gross Pay Calculator</h1>
+<form name="gpc">
+<table>
+<tr>
+    <td>Clock #:</td>
+    <td><input type="text" name="clock" /></td>
+
+</tr>
+<tr>
+    <td>Wage:</td>
+    <td><input type="text" name="wage" /></td>
+</tr>
+<tr>
+    <td>Hours:</td>
+    <td><input type="text" name="hours" /></td>
+</tr>
+<tr>
+    <td>OT:</td>
+    <td><input type="text" name="ot" /></td>
+</tr>
+<tr>
+    <td>OT Pay Factor:</td>
+    <td><input type="text" name="otpf" /></td>
+</tr>
+<tr>
+  <td>Number of Service Years:</td>
+  <td><input type="text" name="service" /></td>
+</tr>
+<tr>
+    <td> </td>
+    <td><input type="button" value="Calculate" onclick="calculateGrossPay();" />
+    <input type="button" value="CE" onclick="document.gpc.reset();" /></td>
+
+</tr>
+<tr><td colspan=2><hr></td>
+<tr>
+    <td><div id="employee_name"></div>Gross Pay:</td>
+    <td><div id="gpvalue">0.00</div></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Gross Pay Calculator</title>
+</head>
+<body>
+  <h1>Gross Pay Calculator</h1>
+  <table>
+    <form action="">
+    <tr>
+      <td>Wage:</td>
+      <td><input type="text" name="wage"></td>
+    </tr>
+    <tr>
+      <td>Hours:</td>
+      <td><input type="text" name="hours"></td>
+    </tr>
+    <tr>
+      <td>OT:</td>
+      <td><input type="text" name="ot"></td>
+    </tr>
+    <tr>
+      <td>OT Pay Factor:</td>
+      <td><input type="text" name="ot_pay_factor"></td>
+    </tr>
+    <tr>
+      <td><button type="button" name="calculate">Calculate</button></td>
+    </tr>
+    <tr>
+      <td><hr /></td>
+    </tr>
+    <tr>
+      <td>Gross:</td>
+      <td><input type="text" name="gross"></td>
+    </tr>
+    <tr>
+      <td>Social Security: </td>
+      <td><input type="text" name="social-securirty"></td>
+    </tr>
+    <tr>
+      <td>Pay Date: </td>
+      <td> <textarea name="Pay Date" placeholder="Write the paydate" rows="2" cols="10"> </textarea></td>
+    </tr>
+    <tr>
+      <td>Gender: </td>
+      <td>
+        <input type="radio" name="gender" value="male" checked>Male<br>
+        <input type="radio" name="gender" value="female">Female<br>
+        <input type="radio" name="gender" value="other">Other
+      </td>
+    </tr>
+    <tr>
+      <td>Marital Status: </td>
+      <td>
+        <select name="marital_status">
+          <option value="married">Married</option>
+          <option value="single">Single</option>
+        </select>
+        <br>
+      </td>
+    </tr>
+    <tr>
+      <td>US Veteran: </td>
+      <td>
+         <input type="checkbox" name="us_veteran" value="yes"> yes
+         <input type="checkbox" name="us_veteran" value="no"> no
+      </td>
+    </tr>
+    </form>
+  </table>
+</body>
+</html>
